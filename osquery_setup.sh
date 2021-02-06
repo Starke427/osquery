@@ -104,14 +104,14 @@ sudo cat > /etc/osquery/osquery.conf << EOF
 }
 },
 "file_paths": {
-    "etc": [
-      "/etc/%%"
-    ],
-    "homes": [
-      "/root/%%",
-      "/home/%/%%"
-    ],
-    "binaries": [
+    	"etc": [
+      		"/etc/%%"
+    	],
+    	"homes": [
+      		"/root/%%",
+      		"/home/%/%%"
+    	],
+    	"binaries": [
 		"/usr/bin/%%",
 		"/usr/sbin/%%",
 		"/bin/%%",
@@ -123,7 +123,13 @@ sudo cat > /etc/osquery/osquery.conf << EOF
 	],
 	"ssh_keys": [
 		"/home/%/.ssh/authorized_keys"
-	]
+	],
+  	"tmp": [
+    		"/tmp/%%"
+  	],
+  	"www": [
+    		"/var/www/%%"
+  	]
 }
 }
 EOF
